@@ -1,62 +1,92 @@
-# 🌌 LumaX Corp - La Nueva Era de la Ingeniería Digital
+# 🌌 LumaX Corp — High-Performance Engineering
 
-![LumaX Banner](https://lumax.lat/favicon.svg)
+<div align="center">
+  <img src="https://lumax.lat/favicon.svg" width="120" alt="LumaX Logo" />
+  <br />
+  <h1>LumaX Corp</h1>
+  <p><strong>Liderando la Transformación Digital con Ingeniería de Élite</strong></p>
+  <p><i>"Donde la visión se encuentra con el código de alto rendimiento."</i></p>
 
-> **"La mejor forma de predecir el futuro es creándolo."** — *Filosofía LumaX*
+  <p>
+    <a href="https://lumax.lat" target="_blank"><strong>Explorar Sitio Oficial »</strong></a>
+  </p>
 
----
-
-## 🚀 Visión General
-**LumaX Corp** no es solo una página web corporativa; es el epicentro de un ecosistema tecnológico de élite diseñado para transformar negocios en potencias digitales. Liderada por **Mateo A. Oscanoa**, la plataforma combina ingeniería de software de vanguardia con un diseño minimalista y una infraestructura robusta.
-
-Este repositorio contiene la arquitectura central de [lumax.lat](https://lumax.lat), una solución "Server-Side" construida para ofrecer rendimiento máximo, seguridad absoluta y una experiencia de usuario inmersiva.
-
----
-
-## 🛠️ Arquitectura de Élite (Tech Stack)
-El proyecto ha sido desarrollado bajo estándares senior, utilizando las tecnologías más potentes del mercado actual:
-
-- **Framework:** [Astro 5.x](https://astro.build/) (Modo Server para dinamismo total).
-- **Frontend UI:** [React](https://reactjs.org/) para componentes interactivos de alta gama.
-- **Base de Datos:** [Better-SQLite3](https://github.com/WiseLibs/better-sqlite3) para una gestión de mensajería ultrarrápida y local.
-- **Estilos:** CSS Modular de nueva generación con variables dinámicas y soporte nativo para **Modo Oscuro/Claro**.
-- **Iconografía:** Lucide React para una identidad visual limpia y moderna.
-- **Despliegue:** PM2 God Daemon para una disponibilidad del 99.9%.
+  <p>
+    <img src="https://img.shields.io/badge/Status-Operational-10b981?style=for-the-badge&logo=statuspage&logoColor=white" alt="Status" />
+    <img src="https://img.shields.io/badge/Security-SSL_Certified-2563eb?style=for-the-badge&logo=letsencrypt&logoColor=white" alt="Security" />
+    <img src="https://img.shields.io/badge/Release-2026_Era-9333ea?style=for-the-badge" alt="Release" />
+  </p>
+</div>
 
 ---
 
-## 💎 Características Premium
-- **Efectos de Profundidad:** Cuadrícula técnica (Tech Grid) y Aura de Cursor dinámica que envuelve toda la experiencia.
-- **SEO de Dominio:** Implementación avanzada de **JSON-LD (Structured Data)** para dominar los rankings de Google.
-- **Navegación Fluida:** Uso de `ClientRouter` de Astro para transiciones instantáneas entre secciones.
-- **Ecosistema Integrado:** Conexión directa con herramientas de gestión como **LumaX Panel**, **Academy** y **Tools**.
-- **Gestión de Leads:** Sistema de mensajería persistente con validación avanzada y almacenamiento físico en servidor.
+## 👨‍💻 Visionario & CEO
+**Mateo A. Oscanoa** — *Software Architect & Infrastructure Expert.*  
+Dedicado a construir infraestructuras digitales escalables y soluciones de software que definen el futuro de los negocios.
 
 ---
 
-## 🏗️ Metodología de Trabajo
-En LumaX Corp seguimos un proceso de ingeniería transparente y profesional:
-1. **Business Intelligence:** Estudio profundo del modelo de negocio del cliente.
-2. **Proforma Visual:** Diseño personalizado alineado con la identidad de marca.
-3. **Infrastructure Setup:** Gestión de dominios, hosting 24/7 y seguridad SSL (HTTPS).
-4. **Prueba de Concepto:** Semana de prueba gratuita para garantizar satisfacción total.
-5. **SEO & Growth:** Posicionamiento en Google Maps y optimización de redes sociales.
+## 🛠️ Stack Tecnológico (Elite Tech Stack)
+
+En **LumaX Corp**, no usamos herramientas comunes. Seleccionamos cuidadosamente las tecnologías más potentes para garantizar que cada proyecto sea una obra maestra de rendimiento y estabilidad.
+
+### 🚀 Core Technologies
+| Tecnología | Función | Icono |
+| :--- | :--- | :---: |
+| **Astro 5.x** | Framework de alto rendimiento (SSR) | ![Astro](https://img.shields.io/badge/Astro-000?style=flat-square&logo=astro&logoColor=white) |
+| **React 19** | Interfaces de usuario interactivas | ![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB) |
+| **TypeScript** | Programación robusta y tipada | ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white) |
+| **Node.js** | Entorno de ejecución de backend | ![Node.js](https://img.shields.io/badge/Node.js-43853D?style=flat-square&logo=node.js&logoColor=white) |
+
+### 💾 Data & Infrastructure
+| Herramienta | Aplicación | Icono |
+| :--- | :--- | :---: |
+| **SQLite 3** | Base de datos local ultrarrápida | ![SQLite](https://img.shields.io/badge/SQLite-07405E?style=flat-square&logo=sqlite&logoColor=white) |
+| **Nginx** | Servidor web de alto tráfico | ![Nginx](https://img.shields.io/badge/Nginx-009639?style=flat-square&logo=nginx&logoColor=white) |
+| **Docker** | Contenedores y microservicios | ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white) |
+| **PM2** | Gestión de procesos y uptime | ![PM2](https://img.shields.io/badge/PM2-2B037A?style=flat-square&logo=pm2&logoColor=white) |
 
 ---
 
-## 👨‍💻 Liderazgo Técnico
-**CEO & Visionario:** [Mateo A. Oscanoa](https://github.com/SrxMateo)
-*Ingeniería de software de alto rendimiento y soluciones de infraestructura crítica.*
+## 💎 Características de Ingeniería
+
+### 🎨 Visual Polish (Deep UI)
+- **Tech Grid Engine:** Fondo de malla técnica global inyectado via CSS para una estética de ingeniería pura.
+- **Cursor Aura:** Efecto de resplandor dinámico que sigue al usuario, optimizado para alto rendimiento.
+- **Adaptive Theming:** Gestión inteligente de temas (Dark/Light) con persistencia en hardware.
+
+### 🔍 SEO Domination
+- **JSON-LD Schema:** Implementación completa de metadatos estructurados para empresas, servicios y perfiles ejecutivos (CEO).
+- **Core Web Vitals:** Optimización extrema para lograr el posicionamiento #1 en motores de búsqueda.
+- **Sitemap Indexing:** Generación automatizada de rutas para indexación inmediata.
+
+### ⚙️ Backend & Logic
+- **Messaging System:** Sistema de captación de leads con validación server-side y persistencia en DB relacional.
+- **ClientRouter:** Transiciones de página instantáneas que eliminan el tiempo de carga percibido.
 
 ---
 
-## 📧 Conecta con LumaX
-Si buscas elevar tu visión al siguiente nivel, puedes encontrarnos a través de nuestros canales oficiales:
+## 🏗️ Metodología de Trabajo LumaX
 
-- **Email:** lumacraft@gmail.com
-- **Telegram:** [@SrIcocnito](https://t.me/SrIcocnito)
-- **Discord:** `srxmateo`
-- **WhatsApp:** [+34 624 26 97 71](https://wa.me/34624269771)
+1. **Discovery:** Análisis técnico y de negocio.
+2. **Proforma Design:** Maquetación visual con identidad de marca única.
+3. **Engineering:** Desarrollo modular y pruebas de estrés.
+4. **Deploy:** Lanzamiento en infraestructura VPS optimizada 24/7.
+5. **SEO Mastery:** Posicionamiento real y visibilidad en Google Maps.
 
 ---
-*© 2026 LumaX Corp. Todos los derechos reservados. Tecnología desarrollada para liderar.*
+
+## 📞 Canales de Comunicación Elite
+
+<div align="left">
+  <a href="https://discord.com/users/srxmateo" target="_blank"><img src="https://img.shields.io/badge/Discord-srxmateo-5865F2?style=for-the-badge&logo=discord&logoColor=white" /></a>
+  <a href="https://t.me/SrIcocnito" target="_blank"><img src="https://img.shields.io/badge/Telegram-@SrIcocnito-0088cc?style=for-the-badge&logo=telegram&logoColor=white" /></a>
+  <a href="https://wa.me/34624269771" target="_blank"><img src="https://img.shields.io/badge/WhatsApp-+34_624_26_97_71-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" /></a>
+  <a href="https://github.com/SrxMateo" target="_blank"><img src="https://img.shields.io/badge/GitHub-SrxMateo-333?style=for-the-badge&logo=github&logoColor=white" /></a>
+</div>
+
+---
+<div align="center">
+  <p>© 2026 LumaX Corp. — Diseñado, Desarrollado y Liderado por <strong>Mateo A. Oscanoa</strong>.</p>
+  <img src="https://img.shields.io/badge/Built_with-Passion_&_Code-ff69b4?style=flat-square" alt="Built with Passion" />
+</div>
