@@ -24,7 +24,10 @@ export default function Navbar() {
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="container nav-container">
-        <a href="/" className="logo">LumaX<span>Corp</span></a>
+        <a href="/" className="logo-wrapper">
+          <img src="/logo.png" alt="LumaX Logo" className="nav-logo" />
+          <span className="logo-text">LumaX<span>Corp</span></span>
+        </a>
         
         {/* Desktop Links */}
         <ul className="nav-links desktop-only">

@@ -1,7 +1,7 @@
 # 🌌 LumaX Corp — High-Performance Engineering
 
 <div align="center">
-  <img src="https://lumax.lat/favicon.svg" width="120" alt="LumaX Logo" />
+  <img src="https://lumax.lat/logo.png" width="300" alt="LumaX Logo" />
   <br />
   <h1>LumaX Corp</h1>
   <p><strong>Liderando la Transformación Digital con Ingeniería de Élite</strong></p>
