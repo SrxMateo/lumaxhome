@@ -1,0 +1,47 @@
+---
+import { Code2, Server, Smartphone, ShieldCheck } from 'lucide-react';
+import '../styles/sections/services.css';
+
+const services = [
+  {
+    title: 'Desarrollo Web',
+    desc: 'Sitios rápidos, modernos y optimizados para SEO usando las últimas tecnologías como Astro y React.',
+    icon: Code2
+  },
+  {
+    title: 'Infraestructura & VPS',
+    desc: 'Configuración y mantenimiento de servidores Linux, despliegue de aplicaciones y gestión de paneles.',
+    icon: Server
+  },
+  {
+    title: 'Aplicaciones Móviles',
+    desc: 'Experiencias móviles nativas y multiplataforma diseñadas para la mejor usabilidad.',
+    icon: Smartphone
+  },
+  {
+    title: 'Ciberseguridad',
+    desc: 'Protección de datos, auditorías de seguridad y cifrado para mantener tu negocio seguro.',
+    icon: ShieldCheck
+  }
+];
+---
+
+<section id="services" class="services">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Nuestros <span class="text-gradient">Servicios</span></h2>
+      <p class="section-subtitle">Soluciones integrales diseñadas para cubrir todas las necesidades digitales de tu empresa.</p>
+    </div>
+    <div class="services-grid">
+      {services.map(service => (
+        <div class="service-card">
+          <div class="service-icon">
+            <service.icon size={32} />
+          </div>
+          <h3>{service.title}</h3>
+          <p>{service.desc}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,58 @@
+---
+import { ExternalLink, LayoutDashboard, GraduationCap, Wrench } from 'lucide-react';
+import '../styles/sections/portfolio.css';
+
+const projects = [
+  {
+    title: 'LumaX Panel',
+    desc: 'Sistema avanzado de gestión de servidores con terminal en tiempo real y explorador de archivos profesional.',
+    url: 'https://lpanel.lumax.lat',
+    icon: LayoutDashboard,
+    status: 'Producción'
+  },
+  {
+    title: 'LumaX Academy',
+    desc: 'Centro de formación tecnológica donde convertimos el conocimiento complejo en habilidades prácticas.',
+    url: 'https://lacademy.lumax.lat',
+    icon: GraduationCap,
+    status: 'Activo'
+  },
+  {
+    title: 'LumaX Tools',
+    desc: 'Suite de utilidades de ingeniería optimizadas para maximizar la productividad del desarrollador moderno.',
+    url: 'https://ltool.lumax.lat',
+    icon: Wrench,
+    status: 'Disponible'
+  }
+];
+---
+
+<section id="portfolio" class="portfolio">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Ecosistema <span class="text-gradient">Premium</span></h2>
+      <p class="section-subtitle">Descubre las potentes herramientas que hemos desarrollado para liderar el sector tecnológico.</p>
+    </div>
+
+    <div class="projects-grid">
+      {projects.map(project => (
+        <div class="project-card">
+          <div class="project-status">
+            <span class="status-dot"></span>
+            {project.status}
+          </div>
+          <div class="project-img-placeholder">
+             <project.icon size={100} strokeWidth={1} className="project-icon-svg" />
+          </div>
+          <div class="project-info">
+            <h3>{project.title}</h3>
+            <p>{project.desc}</p>
+            <a href={project.url} target="_blank" class="project-link">
+              <span>Lanzar Aplicación</span> <ExternalLink size={18} />
+            </a>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

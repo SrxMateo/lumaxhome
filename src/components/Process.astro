@@ -1,0 +1,95 @@
+---
+import { Search, Palette, Globe, HardDrive, ShieldCheck, Zap, MapPin, Share2, Info } from 'lucide-react';
+import '../styles/sections/process.css';
+
+const steps = [
+  {
+    title: 'Estudio de Negocio',
+    desc: 'Analizamos a fondo tu empresa, tus metas y tu competencia para trazar la ruta tecnológica ideal.',
+    icon: Search
+  },
+  {
+    title: 'Diseño Proforma',
+    desc: 'Creamos una propuesta visual personalizada con los colores y la esencia de tu marca y logo.',
+    icon: Palette
+  },
+  {
+    title: 'Dominio y Dirección',
+    desc: 'Gestionamos tu identidad en la red. Si no tienes uno, te ayudamos a elegir el mejor nombre.',
+    icon: Globe,
+    hasInfo: true
+  },
+  {
+    title: 'Hosting 24/7',
+    desc: 'Alojamos tu web en servidores de alto rendimiento para que esté siempre online, sin interrupciones.',
+    icon: HardDrive
+  },
+  {
+    title: 'Seguridad SSL (HTTPS)',
+    desc: 'Protegemos tu sitio con el candado de seguridad, garantizando navegación cifrada y confiable.',
+    icon: ShieldCheck
+  },
+  {
+    title: 'Prueba Gratuita',
+    desc: 'Te damos una semana de prueba gratis para que veas tu web en funcionamiento antes del despliegue final.',
+    icon: Zap,
+    isFree: true
+  },
+  {
+    title: 'Posicionamiento Local',
+    desc: 'Orientación completa en Google Maps para que los clientes te encuentren físicamente con facilidad.',
+    icon: MapPin
+  },
+  {
+    title: 'Ecosistema Digital',
+    desc: 'Conectamos y optimizamos todas tus redes sociales para mejorar tu presencia y autoridad online.',
+    icon: Share2
+  }
+];
+---
+
+<section id="process" class="process">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">¿Cómo <span class="text-gradient">Trabajamos?</span></h2>
+      <p class="section-subtitle">Un proceso transparente y profesional diseñado para llevar tu negocio a lo más alto de la era digital.</p>
+    </div>
+
+    <div class="process-grid">
+      {steps.map((step, index) => (
+        <div class="process-step">
+          <div class="step-number">{index + 1}</div>
+          <div class="step-icon">
+            <step.icon size={40} strokeWidth={1.5} />
+          </div>
+          {step.isFree && <span class="badge-free">1 Semana Gratis</span>}
+          <h3>{step.title}</h3>
+          <p>{step.desc}</p>
+          
+          {step.hasInfo && (
+            <>
+              <button class="domain-info-btn js-domain-btn">
+                <Info size={14} /> ¿Qué es un dominio?
+              </button>
+              <div class="domain-explanation js-domain-exp">
+                Un <strong>dominio</strong> es el nombre único que identifica a tu sitio web en Internet (ej: <em>lumax.lat</em>). Es como la dirección física de tu local, pero en el mundo digital.
+              </div>
+            </>
+          )}
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll('.js-domain-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const exp = btn.nextElementSibling;
+      exp?.classList.toggle('active');
+      btn.innerHTML = exp?.classList.contains('active') 
+        ? '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg> Cerrar'
+        : '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg> ¿Qué es un dominio?';
+    });
+  });
+</script>

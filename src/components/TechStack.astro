@@ -1,0 +1,39 @@
+---
+import '../styles/sections/stack.css';
+
+const tech = [
+  { name: 'Astro', slug: 'astro' },
+  { name: 'React', slug: 'react' },
+  { name: 'TypeScript', slug: 'typescript' },
+  { name: 'Node.js', slug: 'nodedotjs' },
+  { name: 'Python', slug: 'python' },
+  { name: 'Docker', slug: 'docker' },
+  { name: 'HTML5', slug: 'html5' },
+  { name: 'CSS3', slug: 'css3' }
+];
+---
+
+<section id="stack" class="stack">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Nuestro <span class="text-gradient">Stack Tecnológico</span></h2>
+      <p class="section-subtitle">Utilizamos las herramientas más potentes y modernas para garantizar resultados de alta calidad.</p>
+    </div>
+    
+    <div class="stack-marquee">
+      <div class="marquee-content">
+        {tech.concat(tech).map(item => (
+          <div class="tech-item">
+            <img 
+              src={`https://cdn.simpleicons.org/${item.slug}`} 
+              alt={item.name} 
+              class="tech-icon"
+              loading="lazy"
+            />
+            <span>{item.name}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

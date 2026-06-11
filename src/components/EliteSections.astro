@@ -1,0 +1,129 @@
+---
+import '../styles/sections/final.css';
+
+const faqs = [
+  {
+    q: "¿Cuánto tiempo tarda en estar lista mi página?",
+    a: "Dependiendo de la complejidad, una web corporativa estándar suele estar lista en un plazo de 7 a 14 días, incluyendo el periodo de prueba gratuita."
+  },
+  {
+    q: "¿Necesito tener conocimientos técnicos?",
+    a: "Para nada. En LumaX Corp nos encargamos de todo: hosting, dominio, seguridad y mantenimiento. Tú solo te preocupas de tu negocio."
+  },
+  {
+    q: "¿El hosting y el SSL están incluidos?",
+    a: "Sí, todos nuestros planes incluyen alojamiento de alto rendimiento 24/7 y certificado SSL (HTTPS) para garantizar la seguridad de tus clientes."
+  },
+  {
+    q: "¿Cómo funciona la semana de prueba gratis?",
+    a: "Desarrollamos una versión funcional de tu sitio para que la pruebes durante 7 días. Si te gusta el resultado, procedemos con el despliegue final."
+  }
+];
+---
+
+<section class="ceo-section">
+  <div class="container ceo-container">
+    <div class="ceo-image-wrapper">
+      <div class="ceo-decoration"></div>
+      <div class="ceo-image">
+        <span>MA</span>
+      </div>
+    </div>
+    <div class="ceo-content">
+      <span class="ceo-role">Visionario & CEO</span>
+      <h2>Mateo A. Oscanoa</h2>
+      <p class="ceo-bio">
+        \"Mi misión es democratizar la tecnología de élite para cada negocio. En LumaX Corp, no solo escribimos código; construimos los cimientos digitales sobre los cuales nuestros clientes escalan sus sueños. La ingeniería es nuestra pasión, y la excelencia es nuestra única norma.\"
+      </p>
+      <div class="ceo-signature">Mateo A. Oscanoa</div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" class="faq">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Preguntas <span class="text-gradient">Frecuentes</span></h2>
+      <p class="section-subtitle">Resolvemos tus dudas de forma clara y directa.</p>
+    </div>
+
+    <div class="faq-container">
+      {faqs.map((faq) => (
+        <div class="faq-item js-faq-item">
+          <button class="faq-question">
+            {faq.q}
+            <span class="faq-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer">
+            <p>{faq.a}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<section class="testimonials">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Opiniones <span class="text-gradient">Elite</span></h2>
+      <p class="section-subtitle">Lo que dicen quienes ya han confiado su visión digital a LumaX.</p>
+    </div>
+
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="quote-mark">\"</div>
+        <p class="testimonial-text">\"LumaX Corp transformó nuestra presencia online en tiempo récord. El panel de gestión es, sencillamente, de otro nivel.\"</p>
+        <div class="client-info">
+          <div class="client-avatar">JS</div>
+          <div class="client-details">
+            <h4>Juan Soler</h4>
+            <span>CEO de TechFlow</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="quote-mark">\"</div>
+        <p class="testimonial-text">\"La atención personalizada de Mateo y su equipo es impecable. El soporte 24/7 realmente funciona.\"</p>
+        <div class="client-info">
+          <div class="client-avatar">AL</div>
+          <div class="client-details">
+            <h4>Ana López</h4>
+            <span>Fundadora de L-Store</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="quote-mark">\"</div>
+        <p class="testimonial-text">\"Buscábamos seguridad y escalabilidad, y en LumaX Corp encontramos un aliado estratégico inigualable.\"</p>
+        <div class="client-info">
+          <div class="client-avatar">RM</div>
+          <div class="client-details">
+            <h4>Roberto Meza</h4>
+            <span>Director de Sistemas</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll('.js-faq-item').forEach(item => {
+    const btn = item.querySelector('.faq-question');
+    btn?.addEventListener('click', () => {
+      const isActive = item.classList.contains('active');
+      
+      // Close all others
+      document.querySelectorAll('.js-faq-item').forEach(i => i.classList.remove('active'));
+      
+      if (!isActive) {
+        item.classList.add('active');
+      }
+    });
+  });
+</script>

@@ -1,0 +1,301 @@
+---
+import { ClientRouter } from 'astro:transitions';
+import SEOStructuredData from '../components/SEOStructuredData.astro';
+import '../styles/global.css';
+import '../styles/sections/extras.css';
+import Navbar from '../components/Navbar';
+
+interface Props {
+	title: string;
+	description?: string;
+}
+
+const { 
+	title, 
+	description = "LumaX Corp - Mateo A. Oscanoa. Expertos en Desarrollo Web con Astro, Hosting VPS 24/7 y Ciberseguridad. Impulsamos tu negocio al siguiente nivel digital." 
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<ClientRouter />
+
+		<!-- SEO Meta Tags -->
+		<title>LumaX | Mateo A. Oscanoa - Soluciones Digitales de Élite</title>
+		<meta name="title" content="LumaX | Mateo A. Oscanoa - Soluciones Digitales de Élite" />
+		<meta name="description" content={description} />
+		<meta name="keywords" content="LumaX, Mateo A. Oscanoa, Desarrollo Web Astro, Hosting VPS, Ciberseguridad, LumaX Panel, Programación Senior, Agencia Digital" />
+		<meta name="author" content="Mateo A. Oscanoa" />
+		<link rel="canonical" href={canonicalURL} />
+
+		<SEOStructuredData />
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={Astro.url} />
+		<meta property="og:title" content={`${title} | LumaX Corp`} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={new URL('/og-image.png', Astro.url)} />
+
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content={Astro.url} />
+		<meta property="twitter:title" content={`${title} | LumaX Corp`} />
+		<meta property="twitter:description" content={description} />
+		<meta property="twitter:image" content={new URL('/og-image.png', Astro.url)} />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+		
+		<script is:inline>
+			const theme = (() => {
+				if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+					return localStorage.getItem('theme');
+				}
+				if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+					return 'dark';
+				}
+				return 'light';
+			})();
+		
+			if (theme === 'dark') {
+				document.documentElement.setAttribute('data-theme', 'dark');
+			} else {
+				document.documentElement.removeAttribute('data-theme');
+			}
+			window.localStorage.setItem('theme', theme);
+		</script>
+	</head>
+	<body>
+		<div class="tech-grid-bg"></div>
+		<div class="cursor-aura js-cursor-aura"></div>
+		
+		<Navbar client:load />
+		<slot />
+		
+		<footer class="footer">
+			<div class="container footer-container">
+				<div class="footer-info">
+					<p class="logo">LumaX<span>Corp</span></p>
+					<p>© 2026 LumaX Corp. Mateo A. Oscanoa.</p>
+					<div class="footer-socials">
+						<a href="https://github.com/SrxMateo" target="_blank" title="GitHub"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-4.5-2-7-2"/></svg></a>
+						<a href="https://t.me/SrIcocnito" target="_blank" title="Telegram"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg></a>
+						<a href="https://wa.me/34624269771" target="_blank" title="WhatsApp"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.79 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
+					</div>
+				</div>
+				<div class="footer-links">
+					<a href="#terms" class="btn btn-outline btn-sm">Términos y Condiciones</a>
+				</div>
+			</div>
+		</footer>
+
+		<a href="https://wa.me/34624269771" class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
+			<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.79 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+		</a>
+
+		<script>
+			// Intersection Observer for scroll animations
+			const observerOptions = {
+				threshold: 0.1
+			};
+
+			const observer = new IntersectionObserver((entries) => {
+				entries.forEach(entry => {
+					if (entry.isIntersecting) {
+						entry.target.classList.add('reveal');
+					}
+				});
+			}, observerOptions);
+
+			document.querySelectorAll('section').forEach(section => {
+				section.classList.add('reveal-on-scroll');
+				observer.observe(section);
+			});
+
+			// Cursor Aura logic
+			const aura = document.querySelector('.js-cursor-aura') as HTMLElement;
+			window.addEventListener('mousemove', (e) => {
+				if (aura) {
+					aura.style.left = `${e.clientX}px`;
+					aura.style.top = `${e.clientY}px`;
+				}
+			});
+		</script>
+	</body>
+</html>
+
+<style is:global>
+	/* Global Navbar Styles */
+	.navbar {
+		height: 80px;
+		display: flex;
+		align-items: center;
+		position: sticky;
+		top: 0;
+		background-color: var(--bg-navbar);
+		backdrop-filter: blur(10px);
+		z-index: 1000;
+		border-bottom: 1px solid var(--border);
+		transition: var(--transition);
+	}
+
+	.navbar.scrolled {
+		height: 70px;
+		box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+	}
+
+	.nav-container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+	}
+
+	.logo {
+		font-size: 1.5rem;
+		font-weight: 700;
+		color: var(--text-primary);
+	}
+
+	.logo span {
+		color: var(--accent);
+	}
+
+	.nav-links {
+		display: flex;
+		gap: 2rem;
+	}
+
+	.nav-links a {
+		font-weight: 600;
+		color: var(--text-secondary);
+		font-size: 0.95rem;
+	}
+
+	.nav-links a:hover {
+		color: var(--accent);
+	}
+
+	.nav-actions {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+	}
+
+	.mobile-menu-btn {
+		display: none;
+		background: none;
+		border: none;
+		color: var(--text-primary);
+		cursor: pointer;
+	}
+
+	/* Mobile Menu Overlay */
+	.mobile-menu {
+		position: fixed;
+		top: 80px;
+		left: 0;
+		width: 100%;
+		height: 0;
+		background-color: var(--bg-primary);
+		z-index: 999;
+		overflow: hidden;
+		transition: height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+	}
+
+	.mobile-menu.active {
+		height: calc(100vh - 80px);
+	}
+
+	.mobile-nav-links {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 4rem 2rem;
+		gap: 2rem;
+	}
+
+	.mobile-nav-links a {
+		font-size: 1.5rem;
+		font-weight: 700;
+		color: var(--text-primary);
+	}
+
+	/* Reveal on Scroll Styles */
+	.reveal-on-scroll {
+		opacity: 0;
+		transform: translateY(30px);
+		transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+	}
+
+	.reveal-on-scroll.reveal {
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	.footer {
+		padding: 4rem 0;
+		border-top: 1px solid var(--border);
+		background-color: var(--bg-secondary);
+	}
+
+	.footer-container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 2rem;
+	}
+
+	.footer-socials {
+		display: flex;
+		gap: 1rem;
+		margin-top: 1rem;
+	}
+
+	.footer-socials a {
+		color: var(--text-secondary);
+		transition: var(--transition);
+	}
+
+	.footer-socials a:hover {
+		color: var(--accent);
+		transform: translateY(-3px);
+	}
+
+	.footer-links {
+		display: flex;
+		gap: 1.5rem;
+	}
+
+	.footer-links a {
+		color: var(--text-secondary);
+		font-size: 0.9rem;
+	}
+
+	.footer-links a:hover {
+		color: var(--accent);
+	}
+
+	@media (max-width: 768px) {
+		.desktop-only {
+			display: none;
+		}
+		.mobile-menu-btn {
+			display: block;
+		}
+		.footer-container {
+			flex-direction: column;
+			text-align: center;
+		}
+	}
+</style>

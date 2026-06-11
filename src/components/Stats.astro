@@ -1,0 +1,63 @@
+---
+import '../styles/sections/extras.css';
+
+const stats = [
+  { label: 'Disponibilidad', value: '99.9', suffix: '%' },
+  { label: 'Proyectos', value: '100', suffix: '+' },
+  { label: 'Soporte', value: '24/7', suffix: '' },
+  { label: 'Seguridad', value: '100', suffix: '%' }
+];
+---
+
+<section class="stats">
+  <div class="container">
+    <div class="stats-grid">
+      {stats.map(stat => (
+        <div class="stat-item">
+          <span class="stat-number js-counter" data-target={stat.value.replace(/[^0-9.]/g, '')}>0</span><span class="stat-number">{stat.suffix || ''}</span>
+          <span class="stat-label">{stat.label}</span>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<script>
+  const observerOptions = {
+    threshold: 1.0
+  };
+
+  const startCounter = (el) => {
+    const target = parseFloat(el.getAttribute('data-target'));
+    const count = 0;
+    const speed = 2000; // 2 seconds
+    
+    const updateCount = () => {
+      const current = parseFloat(el.innerText);
+      const increment = target / (speed / 16); // 60fps
+
+      if (current < target) {
+        el.innerText = Math.ceil(current + increment);
+        if (target % 1 !== 0) el.innerText = (current + increment).toFixed(1);
+        setTimeout(updateCount, 16);
+      } else {
+        el.innerText = target;
+      }
+    };
+
+    updateCount();
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        startCounter(entry.target);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('.js-counter').forEach(counter => {
+    observer.observe(counter);
+  });
+</script>

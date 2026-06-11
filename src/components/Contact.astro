@@ -1,0 +1,235 @@
+---
+import { Mail, MessageSquare, Send, Github, Disc, SendHorizonal } from 'lucide-react';
+import '../styles/sections/contact.css';
+
+const socialLinks = [
+  { name: 'Discord', id: 'srxmateo', icon: Disc, url: 'https://discord.com/users/srxmateo', color: '#5865F2' },
+  { name: 'Telegram', id: '@SrIcocnito', icon: SendHorizonal, url: 'https://t.me/SrIcocnito', color: '#0088cc' },
+  { name: 'WhatsApp', id: '+34 624 26 97 71', icon: MessageSquare, url: 'https://wa.me/34624269771', color: '#25D366' },
+  { name: 'GitHub', id: 'SrxMateo', icon: Github, url: 'https://github.com/SrxMateo', color: '#333' }
+];
+---
+
+<section id="contact" class="contact">
+  <div class="container contact-container">
+    <div class="contact-info">
+      <h2 class="section-title">¿Listo para <span class="text-gradient">Innovar?</span></h2>
+      <p class="section-subtitle">Estamos aquí para convertir tus ideas en realidades digitales. Contáctanos a través de cualquiera de nuestros canales oficiales.</p>
+      
+      <div class="contact-methods">
+        <div class="contact-item main-email">
+          <div class="icon-box">
+            <Mail size={24} />
+          </div>
+          <div>
+            <h4>Email Corporativo</h4>
+            <p>lumacraft@gmail.com</p>
+          </div>
+        </div>
+
+        <div class="social-grid">
+          {socialLinks.map(social => (
+            <a href={social.url} target="_blank" class="social-card" style={`--brand-color: ${social.color}`}>
+              <div class="social-icon">
+                <social.icon size={20} />
+              </div>
+              <div class="social-text">
+                <span class="social-name">{social.name}</span>
+                <span class="social-id">{social.id}</span>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    <div class="form-container">
+      <form class="contact-form js-contact-form">
+        <div class="form-group">
+          <label>Nombre Completo</label>
+          <input type="text" name="name" required placeholder="Ej: Mateo Santos" />
+        </div>
+        <div class="form-group">
+          <label>Correo Electrónico</label>
+          <input type="email" name="email" required placeholder="mateo@ejemplo.com" />
+        </div>
+        <div class="form-group">
+          <label>Cuéntanos tu proyecto</label>
+          <textarea name="message" required rows="5" placeholder="¿En qué podemos ayudarte? Describe brevemente tus necesidades..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg w-full">
+          <span class="btn-text">Enviar Propuesta</span> <Send size={18} />
+        </button>
+      </form>
+      <div class="success-message js-success-msg">
+        <div class="success-icon">✅</div>
+        <h3>¡Mensaje Recibido!</h3>
+        <p>Gracias por contactar con <strong>LumaX Corp</strong>. Nuestro equipo técnico revisará tu propuesta y te contactaremos en menos de 24 horas.</p>
+        <button class="btn btn-outline js-reset-form">Enviar otro mensaje</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .form-container {
+    position: relative;
+    min-height: 400px;
+  }
+
+  .success-message {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--card-bg);
+    padding: 3rem;
+    border-radius: 2rem;
+    border: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1.5rem;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.9);
+    transition: var(--transition);
+    z-index: 10;
+  }
+
+  .success-message.active {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+  }
+
+  .success-icon {
+    font-size: 4rem;
+  }
+
+  .main-email {
+    margin-bottom: 2rem;
+  }
+
+  .social-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .social-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 1rem;
+    transition: var(--transition);
+  }
+
+  .social-icon {
+    color: var(--brand-color);
+    background: var(--bg-secondary);
+    padding: 0.5rem;
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .social-text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .social-name {
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    color: var(--text-secondary);
+  }
+
+  .social-id {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+
+  .social-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--brand-color);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+  }
+
+  @media (max-width: 576px) {
+    .social-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<script>
+  const form = document.querySelector('.js-contact-form') as HTMLFormElement;
+  const successMsg = document.querySelector('.js-success-msg');
+  const resetBtn = document.querySelector('.js-reset-form');
+
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const formData = new FormData(form);
+    const data = {
+      name: formData.get('name'),
+      email: formData.get('email'),
+      message: formData.get('message')
+    };
+
+    const btn = form.querySelector('button');
+    const btnText = btn?.querySelector('.btn-text');
+    
+    if (btnText) btnText.textContent = 'Enviando...';
+    if (btn) btn.style.opacity = '0.7';
+    if (btn) btn.style.pointerEvents = 'none';
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        form.style.opacity = '0';
+        form.style.visibility = 'hidden';
+        successMsg?.classList.add('active');
+      } else {
+        alert('Error: ' + (result.error || 'No se pudo enviar el mensaje'));
+        if (btnText) btnText.textContent = 'Enviar Propuesta';
+        if (btn) btn.style.opacity = '1';
+        if (btn) btn.style.pointerEvents = 'auto';
+      }
+    } catch (error) {
+      alert('Error de conexión con el servidor');
+      if (btnText) btnText.textContent = 'Enviar Propuesta';
+      if (btn) btn.style.opacity = '1';
+      if (btn) btn.style.pointerEvents = 'auto';
+    }
+  });
+
+  resetBtn?.addEventListener('click', () => {
+    successMsg?.classList.remove('active');
+    form.reset();
+    const btn = form.querySelector('button');
+    const btnText = btn?.querySelector('.btn-text');
+    if (btnText) btnText.textContent = 'Enviar Propuesta';
+    if (btn) btn.style.opacity = '1';
+    if (btn) btn.style.pointerEvents = 'auto';
+    form.style.opacity = '1';
+    form.style.visibility = 'visible';
+  });
+</script>

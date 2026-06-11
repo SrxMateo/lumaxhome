@@ -1,0 +1,157 @@
+<div id="terms-modal" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2>Términos y Condiciones</h2>
+      <button class="close-modal">&times;</button>
+    </div>
+    <div class="modal-body">
+      <h3>1. Aceptación de Términos</h3>
+      <p>Al acceder y utilizar los servicios de <strong>LumaX Corp</strong>, usted acepta cumplir con estos términos y condiciones en su totalidad.</p>
+      
+      <h3>2. Servicios de Desarrollo</h3>
+      <p>LumaX Corp se compromete a realizar un estudio de negocio y entregar una proforma personalizada. La semana de prueba gratuita aplica exclusivamente al diseño web y funcionalidad básica acordada.</p>
+      
+      <h3>3. Propiedad Intelectual</h3>
+      <p>Todo el código, diseño y activos creados por LumaX Corp son propiedad de Mateo A. Oscanoa hasta que se complete el pago total del servicio, momento en el cual se transfieren los derechos de uso al cliente.</p>
+      
+      <h3>4. Hosting y Mantenimiento</h3>
+      <p>El servicio de hosting 24/7 y certificado SSL están sujetos a los planes de suscripción vigentes. LumaX Corp garantiza una disponibilidad del 99.9%.</p>
+      
+      <h3>5. Responsabilidad</h3>
+      <p>LumaX Corp no se hace responsable por el mal uso de las herramientas proporcionadas ni por la pérdida de datos derivada de acciones externas al control de nuestra infraestructura.</p>
+      
+      <h3>6. Contacto</h3>
+      <p>Para cualquier duda legal, puede contactarnos en <strong>lumacraft@gmail.com</strong>.</p>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-primary close-modal">Entendido</button>
+    </div>
+  </div>
+</div>
+
+<style>
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+  }
+
+  .modal.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .modal-content {
+    background-color: var(--card-bg);
+    width: 90%;
+    max-width: 700px;
+    max-height: 80vh;
+    border-radius: 2rem;
+    border: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transform: translateY(20px);
+    transition: var(--transition);
+    box-shadow: 0 50px 100px rgba(0, 0, 0, 0.3);
+  }
+
+  .modal.active .modal-content {
+    transform: translateY(0);
+  }
+
+  .modal-header {
+    padding: 2rem;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .close-modal {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 2rem;
+    cursor: pointer;
+    transition: var(--transition);
+  }
+
+  .close-modal:hover {
+    color: var(--accent);
+  }
+
+  .modal-body {
+    padding: 2rem;
+    overflow-y: auto;
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+  }
+
+  .modal-body h3 {
+    color: var(--text-primary);
+    margin: 1.5rem 0 0.5rem;
+    font-size: 1.2rem;
+  }
+
+  .modal-body p {
+    margin-bottom: 1rem;
+  }
+
+  .modal-footer {
+    padding: 2rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  /* Custom Scrollbar for Modal Body */
+  .modal-body::-webkit-scrollbar {
+    width: 6px;
+  }
+  .modal-body::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 10px;
+  }
+</style>
+
+<script>
+  const modal = document.getElementById('terms-modal');
+  const openBtns = document.querySelectorAll('a[href="#terms"]');
+  const closeBtns = document.querySelectorAll('.close-modal');
+
+  openBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      modal?.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  closeBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      modal?.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    });
+  });
+
+  // Close on outside click
+  modal?.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+  });
+</script>

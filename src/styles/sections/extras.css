@@ -1,0 +1,103 @@
+.stats {
+  background-color: var(--bg-primary);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 3rem;
+  text-align: center;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.stat-number {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+/* WhatsApp Button */
+.whatsapp-float {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: #25d366;
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+  z-index: 1000;
+  transition: var(--transition);
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1) translateY(-5px);
+  box-shadow: 0 15px 30px rgba(37, 211, 102, 0.4);
+}
+
+/* Technical Grid Background */
+.tech-grid-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(var(--border) 1px, transparent 1px),
+    linear-gradient(90deg, var(--border) 1px, transparent 1px);
+  background-size: 50px 50px;
+  opacity: 0.05; /* Softened from 0.08 */
+  pointer-events: none;
+  z-index: 9998;
+}
+
+[data-theme='dark'] .tech-grid-bg {
+  opacity: 0.03; /* Softened from 0.05 */
+}
+
+/* Cursor Follower (Refined Size and Opacity) */
+.cursor-aura {
+  position: fixed;
+  width: 300px; /* Reduced from 600px */
+  height: 300px; /* Reduced from 600px */
+  background: radial-gradient(circle, var(--accent-glow) 0%, transparent 75%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  mix-blend-mode: screen;
+}
+
+[data-theme='light'] .cursor-aura {
+  display: none; /* Keep it off in light mode for max clarity */
+}
+
+body:hover .cursor-aura {
+  opacity: 0.4; /* Softened from 0.6 */
+}
+
+[data-theme='dark'] body:hover .cursor-aura {
+  opacity: 0.7; /* Softened from 1 */
+}

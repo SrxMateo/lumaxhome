@@ -1,0 +1,72 @@
+.stack {
+  overflow: hidden;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.stack-marquee {
+  display: flex;
+  position: relative;
+  width: 100%;
+  mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+}
+
+.marquee-content {
+  display: flex;
+  gap: 6rem;
+  animation: scroll 40s linear infinite;
+  padding: 2rem 0;
+}
+
+.tech-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  min-width: 140px;
+  transition: var(--transition);
+  cursor: default;
+}
+
+.tech-icon {
+  width: 56px;
+  height: 56px;
+  filter: grayscale(1) opacity(0.4);
+  transition: var(--transition);
+}
+
+.tech-item span {
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  color: var(--text-secondary);
+  opacity: 0.7;
+}
+
+.tech-item:hover {
+  transform: scale(1.05);
+}
+
+.tech-item:hover .tech-icon {
+  filter: grayscale(0) opacity(1);
+  transform: translateY(-5px);
+}
+
+.tech-item:hover span {
+  color: var(--accent);
+  opacity: 1;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+[data-theme='dark'] .tech-icon {
+  filter: grayscale(1) invert(1) opacity(0.4);
+}
+
+[data-theme='dark'] .tech-item:hover .tech-icon {
+  filter: grayscale(0) invert(0) opacity(1);
+}

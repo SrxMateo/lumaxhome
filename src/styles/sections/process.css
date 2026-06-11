@@ -1,0 +1,112 @@
+.process {
+  background-color: var(--bg-secondary);
+  position: relative;
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.process-step {
+  background: var(--card-bg);
+  padding: 2.5rem;
+  border-radius: 1.5rem;
+  border: 1px solid var(--border);
+  position: relative;
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.step-number {
+  position: absolute;
+  top: -1rem;
+  left: 2rem;
+  background: var(--accent);
+  color: white;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.1rem;
+  box-shadow: 0 10px 20px var(--accent-glow);
+}
+
+.step-icon {
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.process-step h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.process-step p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.domain-info-btn {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  border: 1px dashed var(--accent);
+  color: var(--accent);
+  background: transparent;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: fit-content;
+}
+
+.domain-info-btn:hover {
+  background: var(--accent);
+  color: white;
+}
+
+.domain-explanation {
+  max-height: 0;
+  overflow: hidden;
+  transition: var(--transition);
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  background: var(--bg-secondary);
+  border-radius: 0.5rem;
+}
+
+.domain-explanation.active {
+  max-height: 200px;
+  padding: 1rem;
+  margin-top: 1rem;
+  border: 1px solid var(--border);
+}
+
+.process-step:hover {
+  transform: translateY(-10px);
+  border-color: var(--accent);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.05);
+}
+
+.badge-free {
+  display: inline-block;
+  background: #10b981;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 2rem;
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}

@@ -1,0 +1,46 @@
+---
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "LumaX Corp",
+  "url": "https://lumax.lat",
+  "logo": "https://lumax.lat/favicon.svg",
+  "sameAs": [
+    "https://wa.me/34624269771"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+34-624-26-97-71",
+    "contactType": "customer service",
+    "email": "lumacraft@gmail.com"
+  }
+};
+
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Mateo A. Oscanoa",
+  "jobTitle": "CEO",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "LumaX Corp"
+  },
+  "url": "https://lumax.lat"
+};
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Desarrollo Web y Hosting VPS",
+  "provider": {
+    "@type": "Organization",
+    "name": "LumaX Corp"
+  },
+  "areaServed": "Global",
+  "description": "Servicios profesionales de desarrollo web con Astro, infraestructura de servidores VPS y ciberseguridad avanzada."
+};
+---
+
+<script type="application/ld+json" is:inline set:html={JSON.stringify(organizationSchema)} />
+<script type="application/ld+json" is:inline set:html={JSON.stringify(personSchema)} />
+<script type="application/ld+json" is:inline set:html={JSON.stringify(serviceSchema)} />
