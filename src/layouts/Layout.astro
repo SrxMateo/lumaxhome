@@ -138,6 +138,21 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 				}
 			});
 		</script>
+		<script is:inline>
+			// Anti-Copy & Anti-Resale System - LumaX Corp
+			document.addEventListener('contextmenu', (e) => e.preventDefault());
+			document.onkeydown = (e) => {
+				if (
+					e.keyCode === 123 || // F12
+					(e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74)) || // Ctrl+Shift+I/J
+					(e.ctrlKey && e.keyCode === 85) // Ctrl+U (View Source)
+				) {
+					return false;
+				}
+			};
+			console.log('%cLumaX Corp %cElite Engineering', 'color: #2563eb; font-size: 30px; font-weight: bold;', 'color: #94a3b8; font-size: 15px;');
+			console.log('%c© 2026 Mateo A. Oscanoa. Todos los derechos reservados. Prohibida su reventa.', 'color: #475569; font-style: italic;');
+		</script>
 	</body>
 </html>
 

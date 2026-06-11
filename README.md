@@ -14,7 +14,7 @@
   <p>
     <img src="https://img.shields.io/badge/Status-Operational-10b981?style=for-the-badge&logo=statuspage&logoColor=white" alt="Status" />
     <img src="https://img.shields.io/badge/Security-SSL_Certified-2563eb?style=for-the-badge&logo=letsencrypt&logoColor=white" alt="Security" />
-    <img src="https://img.shields.io/badge/Release-2026_Era-9333ea?style=for-the-badge" alt="Release" />
+    <img src="https://img.shields.io/badge/Protection-Anti--Copy_Active-eb4034?style=for-the-badge&logo=shield&logoColor=white" alt="Anti-Copy" />
   </p>
 </div>
 
@@ -48,31 +48,39 @@ En **LumaX Corp**, no usamos herramientas comunes. Seleccionamos cuidadosamente 
 
 ---
 
+## 📥 Distribución Mobile
+La plataforma está optimizada para el acceso instantáneo en cualquier dispositivo:
+- **Android:** Distribución vía **APK Nativa** para rendimiento bruto.
+- **iOS (iPhone):** Implementación de **PWA Pro** con icono de app dedicado y navegación sin barra de navegador.
+
+---
+
 ## 💎 Características de Ingeniería
-
-### 🎨 Visual Polish (Deep UI)
-- **Tech Grid Engine:** Fondo de malla técnica global inyectado via CSS para una estética de ingeniería pura.
-- **Cursor Aura:** Efecto de resplandor dinámico que sigue al usuario, optimizado para alto rendimiento.
-- **Adaptive Theming:** Gestión inteligente de temas (Dark/Light) con persistencia en hardware.
-
-### 🔍 SEO Domination
-- **JSON-LD Schema:** Implementación completa de metadatos estructurados para empresas, servicios y perfiles ejecutivos (CEO).
-- **Core Web Vitals:** Optimización extrema para lograr el posicionamiento #1 en motores de búsqueda.
-- **Sitemap Indexing:** Generación automatizada de rutas para indexación inmediata.
-
-### ⚙️ Backend & Logic
-- **Messaging System:** Sistema de captación de leads con validación server-side y persistencia en DB relacional.
-- **ClientRouter:** Transiciones de página instantáneas que eliminan el tiempo de carga percibido.
+- **Tech Grid Engine:** Fondo de malla técnica global inyectado via CSS.
+- **Cursor Aura:** Efecto de resplandor dinámico optimizado.
+- **JSON-LD Schema:** Metadatos estructurados para dominio total en Google.
+- **Anti-Theft System:** Código protegido contra copias y reventa no autorizada.
 
 ---
 
 ## 🏗️ Metodología de Trabajo LumaX
-
 1. **Discovery:** Análisis técnico y de negocio.
 2. **Proforma Design:** Maquetación visual con identidad de marca única.
 3. **Engineering:** Desarrollo modular y pruebas de estrés.
 4. **Deploy:** Lanzamiento en infraestructura VPS optimizada 24/7.
-5. **SEO Mastery:** Posicionamiento real y visibilidad en Google Maps.
+
+---
+
+## ⚖️ Aviso Legal y Propiedad Intelectual
+
+<div align="center">
+  <h3>🛑 PROTECCIÓN DE CÓDIGO ACTIVA</h3>
+  <p>Este software y su diseño son propiedad intelectual exclusiva de <strong>Mateo A. Oscanoa</strong>.</p>
+</div>
+
+1. **Prohibición de Reventa:** Queda estrictamente prohibida la venta de este código o de cualquier derivado del mismo por parte de terceros.
+2. **Distribución No Autorizada:** No se permite la distribución pública o privada de los archivos fuente sin el consentimiento explícito del autor.
+3. **Derechos de Autor:** © 2026 LumaX Corp. Todos los derechos reservados. Cualquier infracción será perseguida legalmente bajo las leyes internacionales de propiedad intelectual.
 
 ---
 
@@ -89,9 +97,4 @@ En **LumaX Corp**, no usamos herramientas comunes. Seleccionamos cuidadosamente 
 <div align="center">
   <p>© 2026 LumaX Corp. — Diseñado, Desarrollado y Liderado por <strong>Mateo A. Oscanoa</strong>.</p>
   <img src="https://img.shields.io/badge/Built_with-Passion_&_Code-ff69b4?style=flat-square" alt="Built with Passion" />
-  <br /><br />
-  <p><strong>⚠️ AVISO LEGAL Y COPYRIGHT:</strong><br />
-  Este software es propiedad intelectual exclusiva de <strong>Mateo A. Oscanoa</strong>. <br />
-  Queda estrictamente prohibida la <strong>REVENTA, DISTRIBUCIÓN O COPIA</strong> no autorizada de este código fuente. <br />
-  Cualquier infracción será tratada bajo las leyes de propiedad intelectual vigentes.</p>
 </div>
