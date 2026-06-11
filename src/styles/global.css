@@ -80,11 +80,35 @@ ul {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 1.5rem; /* Slightly reduced for mobile */
 }
 
 section {
-  padding: 6rem 0;
+  padding: 4rem 0; /* More compact on smaller screens */
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 3rem 0;
+  }
+  
+  .btn {
+    width: 100%; /* Full width buttons for easier touch on mobile */
+    padding: 1rem;
+  }
+}
+
+/* Anti-Copy Selection Style */
+::selection {
+  background: var(--accent);
+  color: white;
+}
+
+/* Mobile-First Refinements */
+@media (hover: none) {
+  .btn:active {
+    transform: scale(0.98); /* Touch feedback */
+  }
 }
 
 h1, h2, h3, h4 {

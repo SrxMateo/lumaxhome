@@ -89,4 +89,9 @@ En **LumaX Corp**, no usamos herramientas comunes. Seleccionamos cuidadosamente 
 <div align="center">
   <p>© 2026 LumaX Corp. — Diseñado, Desarrollado y Liderado por <strong>Mateo A. Oscanoa</strong>.</p>
   <img src="https://img.shields.io/badge/Built_with-Passion_&_Code-ff69b4?style=flat-square" alt="Built with Passion" />
+  <br /><br />
+  <p><strong>⚠️ AVISO LEGAL Y COPYRIGHT:</strong><br />
+  Este software es propiedad intelectual exclusiva de <strong>Mateo A. Oscanoa</strong>. <br />
+  Queda estrictamente prohibida la <strong>REVENTA, DISTRIBUCIÓN O COPIA</strong> no autorizada de este código fuente. <br />
+  Cualquier infracción será tratada bajo las leyes de propiedad intelectual vigentes.</p>
 </div>
