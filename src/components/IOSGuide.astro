@@ -1,0 +1,101 @@
+<div id="ios-guide" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2>Instalar en iPhone</h2>
+      <button class="close-ios-guide close-modal">&times;</button>
+    </div>
+    <div class="modal-body ios-steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <p>Pulsa el botón <strong>Compartir</strong> en la barra inferior de Safari.</p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ios-icon"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" x2="12" y1="2" y2="15"/></svg>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <p>Baja un poco y selecciona <strong>"Añadir a pantalla de inicio"</strong>.</p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ios-icon"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M12 8v8"/><path d="M8 12h8"/></svg>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <p>Pulsa <strong>"Añadir"</strong> arriba a la derecha. ¡Listo!</p>
+      </div>
+      
+      <div class="ios-preview">
+        <img src="/favicon.svg" width="40" alt="LumaX App Icon" />
+        <span>LumaX Corp</span>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-primary close-ios-guide">Entendido</button>
+    </div>
+  </div>
+</div>
+
+<style>
+  .ios-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .step {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    text-align: left;
+  }
+
+  .step-num {
+    background: var(--accent);
+    color: white;
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+  }
+
+  .ios-icon {
+    color: var(--accent);
+  }
+
+  .ios-preview {
+    margin-top: 1rem;
+    padding: 1.5rem;
+    background: var(--bg-secondary);
+    border-radius: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border: 1px solid var(--border);
+  }
+
+  .ios-preview span {
+    font-weight: 700;
+    color: var(--text-primary);
+  }
+</style>
+
+<script>
+  const guide = document.getElementById('ios-guide');
+  const openBtns = document.querySelectorAll('.js-open-ios');
+  const closeBtns = document.querySelectorAll('.close-ios-guide');
+
+  openBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      guide?.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  closeBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      guide?.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    });
+  });
+</script>

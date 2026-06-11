@@ -27,6 +27,14 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 		<meta name="generator" content={Astro.generator} />
 		<ClientRouter />
 
+		<!-- PWA & iOS Native App Support -->
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<meta name="apple-mobile-web-app-title" content="LumaX Corp" />
+		<link rel="apple-touch-icon" href="/favicon.svg" />
+		<meta name="mobile-web-app-capable" content="yes" />
+		<meta name="theme-color" content="#020617" />
+
 		<!-- SEO Meta Tags -->
 		<title>LumaX | Mateo A. Oscanoa - Soluciones Digitales de Élite</title>
 		<meta name="title" content="LumaX | Mateo A. Oscanoa - Soluciones Digitales de Élite" />
